@@ -90,17 +90,19 @@ import utilities
 importlib.reload(utilities)
 ```
 
-# Contents
+# Chapters
 
 <div class="home">
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
 
-    <ul class="post-list">
-        {% for post in paginator.posts %}
-        <li>
-            <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }} </span>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            <span class="post-meta"> {{ post.excerpt }}</span>
-        </li>
-        {% endfor %}
-    </ul>
+          <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }} </span>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span class="post-meta"> {{ post.excerpt }}</span>
+
+      </li>
+    {% endfor %}
+  </ul>
 </div>
+
