@@ -240,7 +240,7 @@ plt.show()
 
 
     
-![png](/fig/3_model_validation_7_1.png)
+![png]({{ site.baseurl }}/fig/3_model_validation_7_1.png)
     
 
 
@@ -324,7 +324,7 @@ fig.tight_layout()
 
 
     
-![png](/fig/3_model_validation_10_0.png)
+![png]({{ site.baseurl }}/fig/3_model_validation_10_0.png)
     
 
 

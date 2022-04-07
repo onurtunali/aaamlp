@@ -68,7 +68,7 @@ plt.show()
 
 
     
-![png](/fig/2_supervised_vs_unsupervised_5_0.png)
+![png]({{ site.baseurl }}/fig/2_supervised_vs_unsupervised_5_0.png)
     
 
 
@@ -94,7 +94,7 @@ plt.show()
 
 
     
-![png](/fig/2_supervised_vs_unsupervised_9_0.png)
+![png]({{ site.baseurl }}/fig/2_supervised_vs_unsupervised_9_0.png)
     
 
 
@@ -126,7 +126,7 @@ plt.show()
 
 
     
-![png](/fig/2_supervised_vs_unsupervised_12_0.png)
+![png]({{ site.baseurl }}/fig/2_supervised_vs_unsupervised_12_0.png)
     
 
 
