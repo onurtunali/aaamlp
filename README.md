@@ -2,6 +2,9 @@
 
 *by Abhishek Thakur*
 
+
+<img src="fig/cover.jpg" align="right" width=200>
+
 This is a lovely recipe book for ML enthusiasts by a kaggle champion. Regardless, author has left many nuances unexplained and encourage the reader (or in this case coder) to work out herself. This is my **companion** to fill in the blanks and clarify certain aspects.
 
 However, one should be wary of the fact that you only learn doing and struggling. So these notes are largely **personal** and somewhat biased towards my knowledge gaps. Use them at your own peril. And now for something completely different...

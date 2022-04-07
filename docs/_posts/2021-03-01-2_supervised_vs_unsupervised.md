@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Supervised vs Unsupervised Learning"
-categories: ML
 date:   2021-03-01 22:54:40 +0300
 excerpt: "Main difference between supervised and unsupervised learning is labeled data points which is called a target (response) variable. Supervised learning starts with labeled data and trains the model accordingly. At the end, newcoming data points are labeled with the predictions of the model."
-
-
 ---
+
 * content
 {:toc}
 
