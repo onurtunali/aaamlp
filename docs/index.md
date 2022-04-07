@@ -2,8 +2,6 @@
 layout: default
 ---
 
-# APPROACHING (ALMOST) ANY MACHINE LEARNING PROBLEM
-
 *by Abhishek Thakur*
 
 This is a lovely recipe book for ML enthusiasts by a kaggle champion. Regardless, author has left many nuances unexplained and encourage the reader (or in this case coder) to work out herself. This is my **companion** to fill in the blanks and clarify certain aspects.
@@ -99,7 +97,6 @@ importlib.reload(utilities)
 
 
 <div class="home">
-
 
   <ul class="post-list">
     {% for post in paginator.posts %}
