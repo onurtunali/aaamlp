@@ -2,7 +2,7 @@
 layout: post
 title: "Supervised vs Unsupervised Learning"
 date:   2021-03-01 22:54:40 +0300
-excerpt: "Main difference between supervised and unsupervised learning is labeled data points which is called a target (response) variable. Supervised learning starts with labeled data and trains the model accordingly. At the end, newcoming data points are labeled with the predictions of the model."
+excerpt: "Main difference between supervised and unsupervised learning is labeled data points which is called a target (response) variable. Supervised learning starts with labeled data and trains the model accordingly. At the end, newcoming data points are labeled with the predictions of the model. Prominent examples are **regression** and **classification**. Unsupervised learning starts with unlabeled data and operates with respect to a task such as **dimensionality reduction**, **clustering**, **density estimation** etc."
 ---
 
 * content
@@ -68,7 +68,7 @@ plt.show()
 
 
     
-![png](../fig/2_supervised_vs_unsupervised_5_0.png)
+![png](/fig/2_supervised_vs_unsupervised_5_0.png)
     
 
 
@@ -94,7 +94,7 @@ plt.show()
 
 
     
-![png](../fig/2_supervised_vs_unsupervised_9_0.png)
+![png](/fig/2_supervised_vs_unsupervised_9_0.png)
     
 
 
@@ -123,8 +123,12 @@ legend_3d = ax_3d.legend(*scatter_3d.legend_elements(),
 ax_3d.add_artist(legend_3d)
 plt.show()
 ```
+
+
     
-![png](../fig/2_supervised_vs_unsupervised_12_0.png)
+![png](/fig/2_supervised_vs_unsupervised_12_0.png)
     
 
+
 It is clear from 3D visualization that we can fairly differentiate digits from each other clearly than 2D visualization. However, t-SNE method might find clusters when there is none. Additionly, this method does not preserve distance and density. Therefore, it is advisable to be alert regarding the assumptions about the dataset. For more information, check [cross validated](https://stats.stackexchange.com/questions/263539/clustering-on-the-output-of-t-sne/264647#264647).
+ </div>

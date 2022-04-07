@@ -2,7 +2,9 @@
 layout: home
 ---
 
-![](fig/cover.jpg)
+<img src="fig/cover.jpg" align="right" style="padding:10px">
+
+*by Abhishek Thakur*
 
 This is a lovely recipe book for ML enthusiasts by a kaggle champion. Regardless, author has left many nuances
 unexplained and encourage the reader (or in this case coder) to work out herself. This is my **companion** to fill in
