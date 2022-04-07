@@ -1,10 +1,11 @@
 ---
-layout: default
+layout: home
 ---
+
+<img src="fig/cover.jpg" align="right" width=200>
 
 *by Abhishek Thakur*
 
-<img src="fig/cover.jpg" align="right" width=200>
 
 This is a lovely recipe book for ML enthusiasts by a kaggle champion. Regardless, author has left many nuances
 unexplained and encourage the reader (or in this case coder) to work out herself. This is my **companion** to fill in
@@ -92,17 +93,5 @@ importlib.reload(utilities)
 
 # Chapters
 
-<div class="home">
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-      <li>
 
-          <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }} </span>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          <span class="post-meta"> {{ post.excerpt }}</span>
-
-      </li>
-    {% endfor %}
-  </ul>
-</div>
 
