@@ -123,12 +123,8 @@ legend_3d = ax_3d.legend(*scatter_3d.legend_elements(),
 ax_3d.add_artist(legend_3d)
 plt.show()
 ```
-
-
     
 ![png](../fig/2_supervised_vs_unsupervised_12_0.png)
     
 
-
 It is clear from 3D visualization that we can fairly differentiate digits from each other clearly than 2D visualization. However, t-SNE method might find clusters when there is none. Additionly, this method does not preserve distance and density. Therefore, it is advisable to be alert regarding the assumptions about the dataset. For more information, check [cross validated](https://stats.stackexchange.com/questions/263539/clustering-on-the-output-of-t-sne/264647#264647).
- </div>

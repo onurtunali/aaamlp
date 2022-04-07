@@ -10,7 +10,6 @@ title: "Approaching (Almost) Any Machine Learning Problem"
 email: onur.tunali@itu.edu.tr
 description: > # this means to ignore newlines until "baseurl:"
   This is the official website and blog of Onur Tunali which covers topics about CS,  mathematics and machine learning with in depth review of textbooks.
-paginate: 5
 baseurl: "/aaamlp" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 twitter_username:

@@ -2,10 +2,7 @@
 layout: home
 ---
 
-<img src="fig/cover.jpg" align="right" width=200>
-
-*by Abhishek Thakur*
-
+![](fig/cover.jpg)
 
 This is a lovely recipe book for ML enthusiasts by a kaggle champion. Regardless, author has left many nuances
 unexplained and encourage the reader (or in this case coder) to work out herself. This is my **companion** to fill in
@@ -54,23 +51,23 @@ links (sorry Windows) to datasets inside project `input` directories.
 An archive including all the datasets can be found in [here](https://www.kaggle.com/abhishek/aaamlp/). Just extract
 everything inside datasets folder without changing any name, you are good to go. Content of data folder is :
 
-adult.csv
-adult_folds.csv
-catinthedat_test.csv
-catinthedat_train.csv
-catinthedat_train_folds.csv
-cat_test.csv
-cat_train.csv
-cat_train_folds.csv
-imdb.csv
-imdb_folds.csv
-mnist_test.csv
-mnist_train.csv
-mnist_train_folds.csv
-mobile_train.csv
-openml
-pneumothorax.csv
-winequality-red.csv
+    adult.csv
+    adult_folds.csv
+    catinthedat_test.csv
+    catinthedat_train.csv
+    catinthedat_train_folds.csv
+    cat_test.csv
+    cat_train.csv
+    cat_train_folds.csv
+    imdb.csv
+    imdb_folds.csv
+    mnist_test.csv
+    mnist_train.csv
+    mnist_train_folds.csv
+    mobile_train.csv
+    openml
+    pneumothorax.csv
+    winequality-red.csv
 
 Another way to use `make get_data` to obtain datasets. First, go to your kaggle account tab and create a kaggle API
 token which is the `kaggle.json` file. Place that file in your `~/.kaggle` directory. Run the following command in your
