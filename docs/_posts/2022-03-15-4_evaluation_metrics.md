@@ -60,18 +60,20 @@ Using a fine-grained terminology for our predictions helps to construct and anal
 |Negative | Positive | False Negative (**FN**) |
 
 **Precision:** How precise your prediction is. Meaning, percentage of true positive predictions amongst all the positive predictions:
-$$\text{Precision } = \frac{TP}{TP + FP}$$
+
+$$ \text{Precision } = \frac{TP}{TP + FP} $$
 
 **Recall (Sensitivity, True Positive Rate (TPR)):** How much of the actual positives your predictions cover. Meaning, percentage of true positive predictions amongst all the actual positives.
-$$\text{Recall } = \frac{TP}{TP + FN}$$
 
-![](fig/precision_recall_CC_BY_SA_4.0.png)
+$$ \text{Recall } = \frac{TP}{TP + FN} $$
+
+![]({{ site.baseurl }}/fig/4_evaluation_metrics_15_0_precision_recall.png)
 
 **Fig 1**: Visualization of precision and recall (License: [CC-BY-SA-4.0](https://commons.wikimedia.org/wiki/File:Precisionrecall.svg))
 
 **F1 score:** Harmonic mean of precision and recall. A better metric when class distribution is skewed:
 
-$$\text{F1 } = \frac{2}{\frac{1}{P} + \frac{1}{R}} = \frac{2PR}{P + R}$$
+$$ \text{F1 } = \frac{2}{\frac{1}{P} + \frac{1}{R}} = \frac{2PR}{P + R} $$
 
 - If the threshold is too high, then you will have a few true positives (**TP**) and many false negatives (**FN**).
 
@@ -287,7 +289,7 @@ results
 
 - Another evaluation of a classifier is receiver operation curve (**ROC**) metric. It uses true positive rate (**TPR**) which is the percentage of **TP** amongst all the actual positive instances and false positive rate (**FPR**) which is the percentage of **FP** amongst all the actual negative instances:
 
-$$TPR = \frac{TP}{TP + FN}, FPR = \frac{FP}{FP + TN}$$
+$$ TPR = \frac{TP}{TP + FN}, FPR = \frac{FP}{FP + TN} $$
 
 
 ```python
@@ -343,7 +345,8 @@ print(f'Area Under Curve (AUC) score is {auc}')
 AUC interpretation goes like this: Given a positive and negative instance, probability such that positive one will be ranked higher than negative one is the value of AUC. It's stated in the book that AUC is widely used for skewed datasets. However, AUC of precision-recall curve demonstrates the class imbalance more clearly and accepted as a better practice. 
 
 **Log loss:** Used in binary classification such that $t \in \{0,1\}$ and $p \in [0,1]$
-$$L(t,p) = -[ t.log(p) + (1-t).log(1-p)]$$
+
+$$ L(t,p) = -[ t.log(p) + (1-t).log(1-p)] $$
 
 Let's check how log loss changes with our confidence of predictions. Higher $p$ means we are sure that datapoint in question is a positive (t=1) instance.
 
@@ -564,17 +567,20 @@ for k in range(1,5):
 
 - So far we have only covered classification metrics. Now, it's time for regression metrics. The easiest metric is $\bf{Error}$ which goes like this given that true label $y$ and prediction $\hat{y}(x)$:
 
-$$\mathbf{Error} = y - \hat{y}(x)$$
+$$ \mathbf{Error} = y - \hat{y}(x) $$
 
 - More grounded version is absolute error since positive and negative error results might cancel each other out producing zero error. Generally an averaged version is used called mean absolute error (MAE):
 
-$$\mathbf{Absolute~Error} = | y - \hat{y}(x)|$$
-$$\mathbf{MAE} = \frac{1}{m} \sum_{i=1}^{m}| y - \hat{y}(x)|$$
+$$ \mathbf{Absolute~Error} = | y - \hat{y}(x)| $$
+
+$$ \mathbf{MAE} = \frac{1}{m} \sum_{i=1}^{m}| y - \hat{y}(x)| $$
 
 - Finally, the most common metric is root mean squared error (RMSE):
+
 $$\mathbf{RMSE} = \sqrt{\frac{1}{m} \sum_{i=1}^{m} (y - \hat{y}(x))^{2}}$$
 
 - Additionally, we have coefficient of determination $R^{2}$:
+
 $$ R^{2} = 1 - \frac{\sum_{i=1}^{m} (y_{i} - y_{pred})^{2}}{\sum_{i=1}^{m} (y_{i} - y_{mean})^{2}} $$
 
 Let's implement the last one and compare it with `sklearn`:
