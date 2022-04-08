@@ -178,6 +178,8 @@ cython_debug/
 
 # Data related files
 *.csv
+*.dcm
+*.zip
 
 # VsCode setting
 .vscode
