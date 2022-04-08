@@ -8,12 +8,8 @@ layout: home
 
 This is a lovely recipe book for ML enthusiasts by a kaggle champion. Regardless, author has left many nuances
 unexplained and encourage the reader (or in this case coder) to work out herself. This is my **companion** to fill in
-the blanks and clarify certain aspects.
-
-However, one should be wary of the fact that you only learn doing and struggling. So these notes are largely
-**personal** and somewhat biased towards my knowledge gaps. Use them at your own peril. And now for something completely
+the blanks and clarify certain aspects. However, one should be wary of the fact that you only learn doing and struggling. So these notes are largely **personal** and somewhat biased towards my knowledge gaps. Use them at your own peril. And now for something completely
 different...
-
 
 # Setup
 First thing first, for the future poor souls trying to code along with this book and using the official repository

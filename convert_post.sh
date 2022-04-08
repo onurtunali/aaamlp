@@ -12,7 +12,7 @@ if [[ $1 -eq 0 ]]; then
         find docs/_posts/"$DIR_NAME$FIG"/ -type f -exec mv {} docs/fig \;
         rm -rf docs/_posts/"$DIR_NAME$FIG"/
         cd docs/_posts
-        sed -i "s|$DIR_NAME$FIG|../fig|g" "$DIR_NAME$MD"
+        sed -i "s|$DIR_NAME$FIG|{{ site.baseurl }}/fig|g" "$DIR_NAME$MD"
         mv $DIR_NAME$MD "$date-$DIR_NAME$MD"
 fi
 

@@ -4,10 +4,7 @@
 
 *by Abhishek Thakur*
 
-This is a lovely recipe book for ML enthusiasts by a kaggle champion. Regardless, author has left many nuances unexplained and encourage the reader (or in this case coder) to work out herself. This is my **companion** to fill in the blanks and clarify certain aspects.
-
-However, one should be wary of the fact that you only learn doing and struggling. So these notes are largely **personal** and somewhat biased towards my knowledge gaps. Use them at your own peril. And now for something completely different...
-
+This is a lovely recipe book for ML enthusiasts by a kaggle champion. Regardless, author has left many nuances unexplained and encourage the reader (or in this case coder) to work out herself. This is my **companion** to fill in the blanks and clarify certain aspects. However, one should be wary of the fact that you only learn doing and struggling. So these notes are largely **personal** and somewhat biased towards my knowledge gaps. Use them at your own peril. And now for something completely different...
 
 # Setup
 First thing first, for the future poor souls trying to code along with this book and using the official repository (accessed on **03.02.2021**) [environment.yml]( https://github.com/abhishekkrthakur/approachingalmost ) for setting up their virtual environment, you are in a world of pain. It is a mess and full of dependency issues. In addition, this requires `make` program. So here's what you should do:

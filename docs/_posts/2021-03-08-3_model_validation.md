@@ -2,7 +2,7 @@
 layout: post
 title: "Model-validation (Cross-validation)"
 date:   2021-03-08 22:54:40 +0300
-excerpt: "Every statistical or machine learning model need to be validated, which is called [statistical model validation](https://en.wikipedia.org/wiki/Statistical_model_validation), before used in real world or production. This means testing the model against never seen before data (out of sample data) and comparing the predictions with dataset results."
+excerpt: "Every statistical or machine learning model need to be validated, which is called statistical model validation, before used in real world or production. This means testing the model against never seen before data (out of sample data) and comparing the predictions with dataset results."
 ---
 
 * content

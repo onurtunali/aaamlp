@@ -25,7 +25,7 @@
             {{ content }}
 
             <ul class="post-list">
-                {% for post in site.posts %}
+                {% for post in site.posts reversed %}
                 <li>
 
                     <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }} </span>
