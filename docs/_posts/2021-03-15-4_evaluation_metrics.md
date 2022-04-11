@@ -5,8 +5,8 @@ date:   2021-03-15 22:54:40 +0300
 excerpt: "Evaluation metrics are used to measure model performance and shouldn't be confused with loss functions. Metrics are related to our target or task indicating our expectations. Loss functions are used for optimization process of model learning and generally they are differentiable. For example cross entropy loss is differentiable but accuracy is not."
 ---
 
-
-# Evaluation Metrics
+* content
+{:toc}
 
 Evaluation metrics are used to measure model performance and shouldn't be confused with loss functions. Metrics are related to our target or task indicating our expectations. Loss functions are used for optimization process of model learning and generally they are differentiable. For example cross entropy loss is differentiable but accuracy is not.
 
@@ -344,9 +344,9 @@ print(f'Area Under Curve (AUC) score is {auc}')
 
 AUC interpretation goes like this: Given a positive and negative instance, probability such that positive one will be ranked higher than negative one is the value of AUC. It's stated in the book that AUC is widely used for skewed datasets. However, AUC of precision-recall curve demonstrates the class imbalance more clearly and accepted as a better practice. 
 
-**Log loss:** Used in binary classification such that $t \in \{0,1\}$ and $p \in [0,1]$
+**Log loss:** For binary version such that $t \in \{0,1\}$ and $p \in [0,1]$
 
-$$ L(t,p) = -[ t.log(p) + (1-t).log(1-p)] $$
+$$ L(t,p) = - \left ( t.log(p) + (1-t).log(1-p) \right ) $$
 
 Let's check how log loss changes with our confidence of predictions. Higher $p$ means we are sure that datapoint in question is a positive (t=1) instance.
 
@@ -402,10 +402,8 @@ def macro_precision(y_true, y_pred):
     precision = 0
     
     for class_ in range(n_class):
-        
         tp = 0
         fp = 0
-        
         for target, pred in zip(y_true, y_pred):
             if target == pred and target == class_:
                 tp += 1
@@ -413,7 +411,6 @@ def macro_precision(y_true, y_pred):
                 fp += 1
                 
         precision += tp / (tp + fp)
-        
     return precision / n_class
 
 
@@ -432,27 +429,21 @@ def micro_precision(y_true, y_pred):
                 fp += 1
             
     precision = tp / (tp + fp)
-    
     return precision
 
 
 def weighted_precision(y_true, y_pred):
-    
-
     n_class = len(set(y_true))
     size_class = [0] * n_class
     
     for target in y_true:
         size_class[target] += 1
     
-    
     precision = 0
     
     for class_ in range(n_class):
-        
         tp = 0
         fp = 0
-        
         for target, pred in zip(y_true, y_pred):
             if target == pred and target == class_:
                 tp += 1
@@ -460,7 +451,6 @@ def weighted_precision(y_true, y_pred):
                 fp += 1
                 
         precision += (tp * size_class[class_]) / (tp + fp)
-        
     return precision / len(y_true)
 ```
 
@@ -499,12 +489,9 @@ metrics.ConfusionMatrixDisplay(cm, display_labels=["Dog","Cat","Unicorn"]).plot(
 plt.show()
 # We can also use `metrics.plot_confusion_matrix()` however it requires an estimator
 ```
-
-
     
 ![png]({{ site.baseurl }}/fig/4_evaluation_metrics_15_0.png)
     
-
 
 - Reading confusion matrix for a single class goes like this:
     - Diagonal element indicates true positives (**TP**)
@@ -521,7 +508,6 @@ plt.show()
 
 ```python
 def pak(y_true, y_pred, k):
-    
     y_local = y_pred[:k]
     pred_set = set(y_local)
     true_set = set(y_true)
@@ -530,9 +516,7 @@ def pak(y_true, y_pred, k):
 
 
 def apak(y_true, y_pred, k):
-    
     pak_values = 0
-    
     for i in range(1,k+1):
         pak_values += pak(y_true, y_pred, i)
         
@@ -540,11 +524,9 @@ def apak(y_true, y_pred, k):
 
 
 def mapak(y_true, y_pred, k):
-    
     result = 0
     for target, pred in zip(y_true, y_pred):
         result += apak(target, pred, k)
-        
     return result / len(y_true)
 ```
 
@@ -571,9 +553,9 @@ $$ \mathbf{Error} = y - \hat{y}(x) $$
 
 - More grounded version is absolute error since positive and negative error results might cancel each other out producing zero error. Generally an averaged version is used called mean absolute error (MAE):
 
-$$ \mathbf{Absolute~Error} = | y - \hat{y}(x)| $$
+$$ \mathbf{Absolute~Error} = \vert y - \hat{y}(x) \vert $$
 
-$$ \mathbf{MAE} = \frac{1}{m} \sum_{i=1}^{m}| y - \hat{y}(x)| $$
+$$ \mathbf{MAE} = \frac{1}{m} \sum_{i=1}^{m} \vert y - \hat{y}(x) \vert $$
 
 - Finally, the most common metric is root mean squared error (RMSE):
 
